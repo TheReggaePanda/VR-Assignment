@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class CollectionPoint : MonoBehaviour
 {
-    GameManager gameManager;
+    
 
     public int WoodMax;
     public int StoneMax;
     private int WoodCount;
+    private int WoodCounter;
+    private int StoneCounter;
     private int StoneCount;
     public GameObject Button;
     public GameObject Building;
@@ -20,7 +22,7 @@ public class CollectionPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
 
         WoodCount = WoodMax;
         StoneCount = StoneMax;
@@ -34,7 +36,7 @@ public class CollectionPoint : MonoBehaviour
     {
         TextUpdate();
 
-        if(WoodMax <= gameManager.Wood() && StoneMax <= gameManager.Stone())
+        if(WoodMax <= WoodCounter && StoneMax <= StoneCounter)
         {
             Build();
         }
@@ -44,19 +46,19 @@ public class CollectionPoint : MonoBehaviour
     {
         if(other.gameObject.tag == "Wood")
         {
-            gameManager.WoodCountUp();
+            WoodCounter++;
             WoodCount--;
         }
         if (other.gameObject.tag == "Stone")
         {
-            gameManager.StoneCountUp();
+            StoneCounter++;
             StoneCount--;
         }
         if (other.gameObject.tag == "BigStone")
         {
-            gameManager.StoneCountUp();
-            gameManager.StoneCountUp();
-            gameManager.StoneCountUp();
+            StoneCounter++;
+            StoneCounter++; 
+            StoneCounter++;
             StoneCount--;
             StoneCount--;
             StoneCount--;
@@ -69,19 +71,17 @@ public class CollectionPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Wood")
         {
-            gameManager.WoodCountDown();
+            WoodCounter--;
             WoodCount++;
         }
         if (other.gameObject.tag == "Stone")
         {
-            gameManager.StoneCountDown();
+            StoneCounter--;
             StoneCount++;
         }
         if (other.gameObject.tag == "BigStone")
         {
-            gameManager.StoneCountDown();
-            gameManager.StoneCountDown();
-            gameManager.StoneCountDown();
+            StoneCounter--; StoneCounter--; StoneCounter--;
             StoneCount++;
             StoneCount++;
             StoneCount++;
