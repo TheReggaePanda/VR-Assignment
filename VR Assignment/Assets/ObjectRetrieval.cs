@@ -22,11 +22,11 @@ public class ObjectRetrieval : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.transform.position = game.transform.position;
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        
+        other.gameObject.transform.position = game.transform.position;
     }
 }

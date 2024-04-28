@@ -6,26 +6,27 @@ using UnityEngine;
 
 public class CollectionPoint : MonoBehaviour
 {
-    
 
+    private bool hasBuilt = false;
     public int WoodMax;
     public int StoneMax;
     private int WoodCount;
     private int WoodCounter;
     private int StoneCounter;
     private int StoneCount;
+    private int gameObjectCount;
     public GameObject Button;
     public GameObject Building;
     public TextMeshProUGUI Woodtext;
     public TextMeshProUGUI Stonetext;
-
+    SceneChanger changer;
     private List<GameObject> myGameObjects = new List<GameObject>();
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        changer = GameObject.Find("GameManager").GetComponent<SceneChanger>();
 
         WoodCount = WoodMax;
         StoneCount = StoneMax;
@@ -39,11 +40,11 @@ public class CollectionPoint : MonoBehaviour
     {
         TextUpdate();
 
-        if(WoodMax <= WoodCounter && StoneMax <= StoneCounter)
+        if(WoodMax <= WoodCounter && StoneMax <= StoneCounter && hasBuilt == false)
         {
             Build();
         }
-        else
+        else if(hasBuilt == false)
         {
             Unbuild();
         }
@@ -70,7 +71,16 @@ public class CollectionPoint : MonoBehaviour
             StoneCount--;
             StoneCount--;
         }
-        
+        if (other.gameObject.tag == "BigWood")
+        {
+            WoodCount--;
+            WoodCounter++;
+            WoodCount--;
+            WoodCounter++;
+            WoodCount--;
+            WoodCounter++;
+        }
+
         AddGameObject(other.gameObject);
 
     }
@@ -89,10 +99,21 @@ public class CollectionPoint : MonoBehaviour
         }
         if (other.gameObject.tag == "BigStone")
         {
-            StoneCounter--; StoneCounter--; StoneCounter--;
+            StoneCounter--;
+            StoneCounter--;
+            StoneCounter--;
             StoneCount++;
             StoneCount++;
             StoneCount++;
+        }
+        if(other.gameObject.tag == "BigWood")
+        {
+            WoodCounter--;
+            WoodCount++;
+            WoodCounter--;
+            WoodCount++;
+            WoodCounter--;
+            WoodCount++;
         }
 
         RemoveGameObject(other.gameObject);
@@ -101,13 +122,20 @@ public class CollectionPoint : MonoBehaviour
     public void ButtonPush()
     {
         Building.gameObject.SetActive(true);
-        Button.SetActive(false);
+        
+        gameObjectCount = myGameObjects.Count;
 
-        foreach (GameObject obj in myGameObjects) 
+        for(int i = 0; i < gameObjectCount; i++)
         {
-            myGameObjects.Remove(obj);
-            Destroy(obj);
+            Destroy(myGameObjects[i]);
         }
+
+        changer.addScore();
+
+        hasBuilt = true;
+
+        Button.SetActive(false);
+        
     }
     void TextUpdate()
     {

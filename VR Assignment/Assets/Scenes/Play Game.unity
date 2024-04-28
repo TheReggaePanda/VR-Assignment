@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 74917822}
   - component: {fileID: 74917821}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BUILD!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,7 +573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: BUILD!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1403,7 +1403,7 @@ GameObject:
   - component: {fileID: 153623711}
   - component: {fileID: 153623710}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BUILD!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: BUILD!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1866,7 +1866,7 @@ PrefabInstance:
       objectReference: {fileID: 2118849457}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: WoodMax
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: Building
@@ -3024,6 +3024,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4607489187838822, guid: 00e2e59cbc04eab4a982218df54ce70b, type: 3}
   m_PrefabInstance: {fileID: 302385128}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &303886287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303886289}
+  - component: {fileID: 303886290}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303886289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303886287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 84.26024, y: 23.858183, z: 65.36604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &303886290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303886287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e7c1a1b8a0b8941ba7251a0a34e52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &305753808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1085883031562116, guid: 957bb31991bce1640a18d0a109c71f3d, type: 3}
@@ -3894,7 +3938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &393976138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4154,7 +4198,7 @@ GameObject:
   - component: {fileID: 406932390}
   - component: {fileID: 406932389}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BUILD!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4200,7 +4244,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: BUILD!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7852,7 +7896,7 @@ PrefabInstance:
       objectReference: {fileID: 1421909716}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: WoodMax
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: Building
@@ -7860,7 +7904,7 @@ PrefabInstance:
       objectReference: {fileID: 351437382}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: StoneMax
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: Woodtext
@@ -9515,7 +9559,7 @@ PrefabInstance:
       objectReference: {fileID: 572057300}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: StoneMax
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: Woodtext
@@ -10585,7 +10629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303765770703250, guid: 9f21020355643c74c88002634abcdabd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 73.44
+      value: 67.53
       objectReference: {fileID: 0}
     - target: {fileID: 4303765770703250, guid: 9f21020355643c74c88002634abcdabd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10593,7 +10637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4303765770703250, guid: 9f21020355643c74c88002634abcdabd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.35
+      value: -23.55
       objectReference: {fileID: 0}
     - target: {fileID: 4303765770703250, guid: 9f21020355643c74c88002634abcdabd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12817,7 +12861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7179462289238023466, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.44
+      value: 72.87
       objectReference: {fileID: 0}
     - target: {fileID: 7179462289238023466, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12825,7 +12869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7179462289238023466, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.6
+      value: 30.55
       objectReference: {fileID: 0}
     - target: {fileID: 7179462289238023466, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12859,6 +12903,14 @@ PrefabInstance:
       propertyPath: m_ActivateAction.m_Reference
       value: 
       objectReference: {fileID: -8270564778575511633, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 7584292252706443796, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
+      propertyPath: m_SmoothTurnEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584292252706443796, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
+      propertyPath: m_SmoothMotionEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8189171601776884798, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07
@@ -14578,7 +14630,7 @@ GameObject:
   - component: {fileID: 1519016738}
   - component: {fileID: 1519016737}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BUILD!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14624,7 +14676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: BUILD!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14903,7 +14955,7 @@ GameObject:
   - component: {fileID: 1553626611}
   - component: {fileID: 1553626610}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BUILD!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14949,7 +15001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: BUILD!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19302,7 +19354,7 @@ PrefabInstance:
       objectReference: {fileID: 1978632812}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: StoneMax
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: Woodtext
@@ -19542,7 +19594,7 @@ PrefabInstance:
       objectReference: {fileID: 1095906991}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: WoodMax
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: Building
@@ -20138,7 +20190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7709269632320173475, guid: 333586d75d6313842be884fb7ee4bb77, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.687515
+      value: 77.27
       objectReference: {fileID: 0}
     - target: {fileID: 7709269632320173475, guid: 333586d75d6313842be884fb7ee4bb77, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20146,7 +20198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7709269632320173475, guid: 333586d75d6313842be884fb7ee4bb77, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.731903
+      value: -12.12
       objectReference: {fileID: 0}
     - target: {fileID: 7709269632320173475, guid: 333586d75d6313842be884fb7ee4bb77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20243,7 +20295,7 @@ PrefabInstance:
       objectReference: {fileID: 2062164809}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: WoodMax
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6992075166864399177, guid: a25996a7d0674de40a8273b54b50aa7b, type: 3}
       propertyPath: Building
@@ -20539,7 +20591,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141430680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -298, y: -251, z: 29}
+  m_LocalPosition: {x: -298, y: -121, z: 29}
   m_LocalScale: {x: 2000, y: 44.347, z: 2000}
   m_ConstrainProportionsScale: 0
   m_Children: []

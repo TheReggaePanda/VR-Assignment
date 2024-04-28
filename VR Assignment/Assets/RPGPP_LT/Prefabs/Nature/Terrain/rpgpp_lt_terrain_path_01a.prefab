@@ -151,6 +151,8 @@ MonoBehaviour:
   StoneMax: 0
   Button: {fileID: 0}
   Building: {fileID: 0}
+  Woodtext: {fileID: 0}
+  Stonetext: {fileID: 0}
 --- !u!1 &575375134539691977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,7 +1103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7321385065744615240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51beb2d73f9aa104bbc7cbf194a1b2c5, type: 3}
   m_Name: 
