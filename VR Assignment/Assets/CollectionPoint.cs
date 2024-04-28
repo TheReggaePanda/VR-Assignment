@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CollectionPoint : MonoBehaviour
@@ -17,6 +18,8 @@ public class CollectionPoint : MonoBehaviour
     public GameObject Building;
     public TextMeshProUGUI Woodtext;
     public TextMeshProUGUI Stonetext;
+
+    private List<GameObject> myGameObjects = new List<GameObject>();
     
 
     // Start is called before the first frame update
@@ -39,6 +42,10 @@ public class CollectionPoint : MonoBehaviour
         if(WoodMax <= WoodCounter && StoneMax <= StoneCounter)
         {
             Build();
+        }
+        else
+        {
+            Unbuild();
         }
     }
 
@@ -64,6 +71,7 @@ public class CollectionPoint : MonoBehaviour
             StoneCount--;
         }
         
+        AddGameObject(other.gameObject);
 
     }
 
@@ -86,15 +94,24 @@ public class CollectionPoint : MonoBehaviour
             StoneCount++;
             StoneCount++;
         }
+
+        RemoveGameObject(other.gameObject);
     }
 
     public void ButtonPush()
     {
         Building.gameObject.SetActive(true);
+        Button.SetActive(false);
+
+        foreach (GameObject obj in myGameObjects) 
+        {
+            myGameObjects.Remove(obj);
+            Destroy(obj);
+        }
     }
     void TextUpdate()
     {
-        Debug.Log("TextUpdate");
+        
         
         Woodtext.text = WoodCount.ToString();
 
@@ -105,6 +122,24 @@ public class CollectionPoint : MonoBehaviour
     public void Build()
     {
         Button.SetActive(true);
-        Debug.Log("Button Is Active");
+        
+    }
+
+    public void Unbuild()
+    {
+        Button.SetActive(false);
+       
+    }
+
+    public void AddGameObject (GameObject gameObject)
+    {
+        myGameObjects.Add(gameObject);
+        Debug.Log("Added");
+    }
+
+    public void RemoveGameObject (GameObject gameObject) 
+    {
+        myGameObjects.Remove(gameObject);
+        Debug.Log("Removed");
     }
 }
